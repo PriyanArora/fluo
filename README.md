@@ -1,66 +1,72 @@
 # fluo
 
-![fluo console](docs/assets/fluo-console.png)
+fluo is a local proof of concept for defence procurement workflow control and audit logging. It models how a Canadian defence organization could route a procurement document, evaluate vendor risk, block risky workflow paths, surface affected projects, and write audit events to a local blockchain ledger.
 
-fluo is a proof-of-concept defence procurement workflow and audit ledger. It demonstrates how a Canadian defence organization could run approval workflows, flag risky vendors, propagate risk across related projects, and preserve key procurement events in a tamper-evident blockchain log.
+This is a demo system. It does not connect to CanadaBuys, DND, sanctions lists, Controlled Goods systems, identity providers, payment rails, or production databases.
 
-This is not a production procurement system. It has no real CanadaBuys, DND, sanctions, Controlled Goods, identity, or payment integrations. The goal is to prove the workflow, risk-detection, and audit-ledger pattern with a local demo.
+## What It Does
 
-## What It Shows
+- Opens a CFB Gagetown organization workspace.
+- Displays a Radar Support Equipment procurement workflow.
+- Renders vendor, part-origin, workflow, and ledger nodes on a React Flow canvas.
+- Checks local JSON vetting data before a vendor is accepted.
+- Blocks workflow progress when a vendor is flagged.
+- Shows related projects affected by the same vendor.
+- Records procurement events in a local Solidity ledger.
+- Stores readable demo audit history in JSON for the UI.
 
-- A CFB Gagetown organization workspace.
-- A procurement document with a visual approval workflow.
-- Vendor and part-origin nodes rendered on a React Flow canvas.
-- Local JSON vetting data that can mark a vendor as clear or flagged.
-- Automatic blocking of flagged vendors in the workflow.
-- Affected-project propagation when the same vendor appears elsewhere.
-- A local Solidity ledger that records event metadata and payload hashes.
-- A readable local JSON cache for demo audit events.
+## Architecture
+
+```mermaid
+flowchart LR
+  User["User"]
+  UI["Next.js app"]
+  Canvas["React Flow workflow canvas"]
+  API["ChainOps API routes"]
+  Risk["Risk engine"]
+  Store["Local JSON data"]
+  LedgerLib["Ledger writer"]
+  Chain["Local Hardhat chain"]
+  Contract["ChainOpsLedger.sol"]
+
+  User --> UI
+  UI --> Canvas
+  UI --> API
+  API --> Risk
+  Risk --> Store
+  API --> LedgerLib
+  LedgerLib --> Store
+  LedgerLib --> Chain
+  Chain --> Contract
+```
 
 ## Tech Stack
 
-- **Frontend:** Next.js canary, React 19, TypeScript, Tailwind CSS, lucide-react.
-- **Workflow canvas:** `@xyflow/react` / React Flow-style nodes and edges.
-- **Blockchain:** Solidity, Hardhat, ethers v6.
-- **Data layer:** Local JSON files under `open-agent-builder/data/`.
-- **Runtime:** Node.js/npm.
-- **Design reference:** `stitch_flu_procurement_workflow_interface/` for the sharp monochrome fluo interface language.
-
-## Repositories Used
-
-- **`firecrawl/open-agent-builder`**: main UI base for the visual workflow builder.
-  - Source: https://github.com/firecrawl/open-agent-builder
-  - Used for the workflow-builder foundation, Next.js/React structure, canvas experience, and app shell.
-
-- **`faizack/Supply-Chain-Blockchain`**: blockchain reference only.
-  - Source: https://github.com/faizack/Supply-Chain-Blockchain
-  - Used for Solidity, Hardhat, deployment, and frontend-to-contract interaction patterns.
-
-The active app is not a full copy of either product. It is a narrowed proof of concept built around the fluo procurement scenario.
+- **App:** Next.js, React 19, TypeScript
+- **UI:** Tailwind CSS, lucide-react, React Flow through `@xyflow/react`
+- **Ledger:** Solidity, Hardhat, ethers v6
+- **Data:** local JSON files in `open-agent-builder/data`
+- **Runtime:** Node.js and npm
 
 ## Repository Layout
 
 ```txt
 .
 |-- README.md
-|-- docs/assets/fluo-console.png
-|-- open-agent-builder/
-|   |-- app/                         # Next.js routes and API endpoints
-|   |-- components/chainops/          # fluo workflow, workspace, ledger UI
-|   |-- contracts/ChainOpsLedger.sol  # single demo audit-ledger contract
-|   |-- data/                         # local JSON demo data
-|   |-- lib/blockchain/               # ledger write/cache helpers
-|   |-- lib/chainops/                 # JSON store and risk engine
-|   `-- scripts/                      # dev, deploy, and spec-check scripts
-|-- Supply-Chain-Blockchain/          # source reference kept as ordinary files
-`-- stitch_flu_procurement_workflow_interface/
+`-- open-agent-builder/
+    |-- app/                         # Next.js routes and API endpoints
+    |-- components/chainops/          # Workflow, workspace, and ledger UI
+    |-- contracts/ChainOpsLedger.sol  # Demo audit-ledger contract
+    |-- data/                         # Local demo data
+    |-- lib/blockchain/               # Ledger write helpers
+    |-- lib/chainops/                 # JSON store and risk engine
+    |-- public/                       # Static images and favicon
+    `-- scripts/                      # Dev, deploy, and check scripts
 ```
-
-There is one Git repository at this root. The nested source clones have been flattened into this workspace and should not keep their own `.git` directories.
 
 ## Local Demo
 
-From the main app folder:
+Run the app from the project folder:
 
 ```bash
 cd open-agent-builder
@@ -68,7 +74,7 @@ npm install
 npm run dev
 ```
 
-`npm run dev` starts a local Hardhat chain, deploys `ChainOpsLedger.sol`, writes the deployed address to `data/contract-address.json`, and starts the Next.js app.
+`npm run dev` starts a local Hardhat chain, deploys `ChainOpsLedger.sol`, writes the contract address to `data/contract-address.json`, and starts the Next.js app.
 
 Useful checks:
 
@@ -80,7 +86,7 @@ npm run build
 
 ## Demo Data
 
-Readable demo state lives in JSON files:
+The demo state is stored in JSON:
 
 - `organizations.json`
 - `documents.json`
@@ -92,26 +98,20 @@ Readable demo state lives in JSON files:
 - `ledger-events-cache.json`
 - `contract-address.json`
 
-The blockchain is only the tamper-evident log. The UI reads human-friendly demo state from JSON.
+The blockchain ledger stores event metadata and payload hashes. The JSON cache keeps the audit trail readable in the demo UI.
 
-## Scope Boundaries
+## Scope
 
-- No production database.
-- No real authentication.
-- No external procurement-system integration.
-- No public-chain deployment.
-- No classified or official government system connectivity.
-- No generalized supply-chain DApp UI.
-- One Solidity contract only: `ChainOpsLedger.sol`.
+- No production database
+- No real authentication
+- No external procurement integration
+- No public-chain deployment
+- No classified or official government connectivity
+- One demo smart contract: `ChainOpsLedger.sol`
 
-## Current Status
+## Source References
 
-The proof of concept is focused on a single Canadian defence procurement scenario:
+The active codebase is a narrowed fluo demo built from selected patterns in:
 
-1. Open the CFB Gagetown workspace.
-2. Open the Radar Support Equipment procurement workflow.
-3. Drag or evaluate a vendor node.
-4. The risk engine checks local vetting JSON.
-5. A flagged vendor blocks the workflow path.
-6. Related projects using the same vendor are surfaced.
-7. The event is logged to the local blockchain ledger and cached in JSON for display.
+- `firecrawl/open-agent-builder` for the Next.js workflow-builder base
+- `faizack/Supply-Chain-Blockchain` for Solidity, Hardhat, and contract interaction patterns
