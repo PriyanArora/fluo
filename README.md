@@ -96,9 +96,8 @@ The demo state is stored in JSON:
 - `projects.json`
 - `relationships.json`
 - `ledger-events-cache.json`
-- `contract-address.json`
 
-The blockchain ledger stores event metadata and payload hashes. The JSON cache keeps the audit trail readable in the demo UI.
+The blockchain ledger stores event metadata and payload hashes. The JSON cache keeps the audit trail readable in the demo UI. The local contract address is generated at `open-agent-builder/data/contract-address.json` when the dev chain is deployed.
 
 ## Scope
 

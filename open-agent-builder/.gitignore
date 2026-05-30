@@ -11,13 +11,20 @@
 # next.js
 /.next/
 /out/
+/open-agent-builder/
 
 # production
 /build
 
+# hardhat
+/artifacts/
+/cache/
+/.hardhat-home/
+
 # misc
 .DS_Store
 *.pem
+tsconfig.tsbuildinfo
 
 # debug
 npm-debug.log*
@@ -30,6 +37,7 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+data/contract-address.json
 
 # vercel
 .vercel
