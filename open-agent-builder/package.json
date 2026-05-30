@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "tsx scripts/dev.ts",
     "dev:web": "next dev",
-    "chain:node": "HOME=.hardhat-home hardhat node --hostname 127.0.0.1",
-    "chain:deploy": "HOME=.hardhat-home hardhat run scripts/deploy.ts --network localhost",
-    "chain:compile": "HOME=.hardhat-home hardhat compile",
+    "chain:node": "tsx scripts/hardhat.ts node --hostname 127.0.0.1",
+    "chain:deploy": "tsx scripts/hardhat.ts run scripts/deploy.ts --network localhost",
+    "chain:compile": "tsx scripts/hardhat.ts compile",
     "build": "next build",
     "start": "next start",
     "test": "npm run spec-check",

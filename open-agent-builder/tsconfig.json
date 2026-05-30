@@ -46,21 +46,6 @@
     ".next/dev/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "components/app",
-    "components/shared",
-    "components/ui",
-    "components/workflow",
-    "components/icons",
-    "components/FirecrawlIcon",
-    "convex",
-    "lib/api",
-    "lib/arcade",
-    "lib/approval",
-    "lib/config",
-    "lib/convex",
-    "lib/errors",
-    "lib/mcp",
-    "lib/workflow"
+    "node_modules"
   ]
 }
