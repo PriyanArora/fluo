@@ -1,0 +1,20 @@
+[
+  {
+    "entityId": "vendor-northline-systems",
+    "entityType": "vendor",
+    "projectId": "project-radar-001",
+    "relationship": "candidate_vendor"
+  },
+  {
+    "entityId": "vendor-northline-systems",
+    "entityType": "vendor",
+    "projectId": "project-comms-002",
+    "relationship": "existing_vendor"
+  },
+  {
+    "entityId": "vendor-northline-systems",
+    "entityType": "vendor",
+    "projectId": "project-maint-003",
+    "relationship": "past_vendor"
+  }
+]

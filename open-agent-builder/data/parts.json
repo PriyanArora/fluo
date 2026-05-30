@@ -1,0 +1,192 @@
+[
+  {
+    "id": "part-rsp-7",
+    "name": "Radar Signal Processing Module",
+    "partNumber": "RSP-7",
+    "category": "Signal Electronics",
+    "projectId": "project-radar-001",
+    "vendorId": "vendor-northline-systems",
+    "originCountry": "Canada (final assembly)",
+    "componentOrigins": ["Canada", "United States", "China"],
+    "controlledGoodsStatus": "registered",
+    "batch": "BATCH-2024-RSP-118",
+    "status": "in_review",
+    "summary": "Primary signal-processing board for the Gagetown radar support upgrade. Final assembly in Canada, but two sub-components were sourced through an offshore supply chain.",
+    "provenance": [
+      {
+        "stage": "PART_REGISTERED",
+        "label": "Part registered on ledger",
+        "detail": "Component logged against the radar procurement workflow.",
+        "location": "NorthLine Systems — Kingston, Ontario",
+        "actor": "commander-001",
+        "timestamp": "2026-04-12T14:05:00.000Z",
+        "transactionHash": "0x4af19c0e7b2d51a8c93f4e6177b0a2d9e8c41b3f0a7d62e95c18f4b730ad62f1"
+      },
+      {
+        "stage": "ORIGIN_DECLARED",
+        "label": "Component origins declared",
+        "detail": "Supplier declared component sourcing across Canada, United States and China.",
+        "location": "NorthLine Systems — Kingston, Ontario",
+        "actor": "vendor-northline-systems",
+        "timestamp": "2026-04-13T09:30:00.000Z",
+        "transactionHash": "0x9c2b71fd34e0a5168b7c4d9e2f01a386dd5b9c70e41f82a6539db70cf12e8a44"
+      },
+      {
+        "stage": "CUSTODY_TRANSFER",
+        "label": "Custody transferred to base",
+        "detail": "Module received by CFB Gagetown procurement receiving.",
+        "location": "CFB Gagetown — Receiving Dock 3",
+        "actor": "logistics-officer-204",
+        "timestamp": "2026-04-19T16:42:00.000Z",
+        "transactionHash": "0x1e8f44a9b0c7d2356e9a1f4b88c0d73e2a6519fbc4083d7e1a9b62c5f4017d33"
+      },
+      {
+        "stage": "ORIGIN_FLAG",
+        "label": "Origin review flag raised",
+        "detail": "Component origin includes China; flagged for human review per supply-chain policy.",
+        "location": "Security Office — CFB Gagetown",
+        "actor": "security-officer-077",
+        "timestamp": "2026-04-22T11:15:00.000Z",
+        "transactionHash": "0x77d0b2e6915a4c83f0e7d214a9c6b35f8801de42b7c93a05f6128e4d3b0a9c71"
+      }
+    ]
+  },
+  {
+    "id": "part-aac-3",
+    "name": "Antenna Array Controller",
+    "partNumber": "AAC-3",
+    "category": "Signal Electronics",
+    "projectId": "project-radar-001",
+    "vendorId": "vendor-maple-secure",
+    "originCountry": "Canada",
+    "componentOrigins": ["Canada"],
+    "controlledGoodsStatus": "registered",
+    "batch": "BATCH-2024-AAC-052",
+    "status": "cleared",
+    "summary": "Controls the steering of the radar antenna array. Fully sourced and assembled in Canada by a controlled-goods registered supplier.",
+    "provenance": [
+      {
+        "stage": "PART_REGISTERED",
+        "label": "Part registered on ledger",
+        "detail": "Component logged against the radar procurement workflow.",
+        "location": "Maple Secure Components — Halifax, Nova Scotia",
+        "actor": "commander-001",
+        "timestamp": "2026-04-12T14:08:00.000Z",
+        "transactionHash": "0x2bd7a14fc9083e62a5f1b40d7e9c2156388af0b7d4e132c95a0768fbe24c01d9"
+      },
+      {
+        "stage": "ORIGIN_DECLARED",
+        "label": "Component origins declared",
+        "detail": "All components sourced and assembled within Canada.",
+        "location": "Maple Secure Components — Halifax, Nova Scotia",
+        "actor": "vendor-maple-secure",
+        "timestamp": "2026-04-13T10:02:00.000Z",
+        "transactionHash": "0x8a0c5e2147d9b6f3082a1c4be75d09f3a62418d0b7c94f351a06e8d3c4b1a907"
+      },
+      {
+        "stage": "CUSTODY_TRANSFER",
+        "label": "Custody transferred to base",
+        "detail": "Controller received by CFB Gagetown procurement receiving.",
+        "location": "CFB Gagetown — Receiving Dock 3",
+        "actor": "logistics-officer-204",
+        "timestamp": "2026-04-18T13:20:00.000Z",
+        "transactionHash": "0x5f1b9c8e3a07d246b9f0e1c54a8d72b3360e9af1c7d2b485e0a96f3c1d27b840"
+      },
+      {
+        "stage": "ORIGIN_VERIFIED",
+        "label": "Origin verified — cleared",
+        "detail": "Origin verified against controlled-goods registration. No review required.",
+        "location": "Security Office — CFB Gagetown",
+        "actor": "security-officer-077",
+        "timestamp": "2026-04-20T09:45:00.000Z",
+        "transactionHash": "0xc3068a1f4be29d75032e7a1c9d8b46f50917cae23b6d80f41a25e9c7b0d3a268"
+      }
+    ]
+  },
+  {
+    "id": "part-ert-9",
+    "name": "Encrypted Radio Transceiver",
+    "partNumber": "ERT-9",
+    "category": "Communications",
+    "projectId": "project-comms-002",
+    "vendorId": "vendor-northline-systems",
+    "originCountry": "United States",
+    "componentOrigins": ["United States", "Canada"],
+    "controlledGoodsStatus": "unknown",
+    "batch": "BATCH-2024-ERT-310",
+    "status": "in_review",
+    "summary": "Secure radio transceiver for the base communications retrofit. Supplied by the same contractor under cross-project review.",
+    "provenance": [
+      {
+        "stage": "PART_REGISTERED",
+        "label": "Part registered on ledger",
+        "detail": "Component logged against the communications retrofit workflow.",
+        "location": "NorthLine Systems — Kingston, Ontario",
+        "actor": "commander-002",
+        "timestamp": "2026-03-28T15:10:00.000Z",
+        "transactionHash": "0x6d2a90f1c7be3458a0d1e6f49c2b7350881fae0d3b7c94a25f6018e3d4b0a972"
+      },
+      {
+        "stage": "ORIGIN_DECLARED",
+        "label": "Component origins declared",
+        "detail": "Primary origin United States with Canadian integration.",
+        "location": "NorthLine Systems — Kingston, Ontario",
+        "actor": "vendor-northline-systems",
+        "timestamp": "2026-03-29T08:55:00.000Z",
+        "transactionHash": "0xa70d4b18e2c9f5360a1d8e7b42c0539f6618ae0d2b7c94f351a06e8d3c4b1a90"
+      },
+      {
+        "stage": "CUSTODY_TRANSFER",
+        "label": "Custody transferred to base",
+        "detail": "Transceiver received by CFB Gagetown signals unit.",
+        "location": "CFB Gagetown — Signals Unit",
+        "actor": "logistics-officer-204",
+        "timestamp": "2026-04-03T12:00:00.000Z",
+        "transactionHash": "0x0b3e7a1d9c6f24580a2e1d8b47c5630f9912ae0d4b7c83f256a01e9d3c4b2a81"
+      }
+    ]
+  },
+  {
+    "id": "part-vvs-2",
+    "name": "Vehicle Vibration Sensor Pack",
+    "partNumber": "VVS-2",
+    "category": "Sensors",
+    "projectId": "project-maint-003",
+    "vendorId": "vendor-northline-systems",
+    "originCountry": "China",
+    "componentOrigins": ["China", "Canada"],
+    "controlledGoodsStatus": "unknown",
+    "batch": "BATCH-2024-VVS-077",
+    "status": "in_review",
+    "summary": "Vibration sensor package for the vehicle maintenance program. Same contractor as the radar project; sensor core manufactured offshore.",
+    "provenance": [
+      {
+        "stage": "PART_REGISTERED",
+        "label": "Part registered on ledger",
+        "detail": "Component logged against the vehicle maintenance workflow.",
+        "location": "NorthLine Systems — Kingston, Ontario",
+        "actor": "commander-003",
+        "timestamp": "2026-03-15T10:20:00.000Z",
+        "transactionHash": "0x3c1f8a0e2b7d94560a1e9d8b46c2570f3318ae0d1b7c64f259a08e3d4c0b1a76"
+      },
+      {
+        "stage": "ORIGIN_DECLARED",
+        "label": "Component origins declared",
+        "detail": "Sensor core manufactured in China and integrated in Canada.",
+        "location": "NorthLine Systems — Kingston, Ontario",
+        "actor": "vendor-northline-systems",
+        "timestamp": "2026-03-16T09:12:00.000Z",
+        "transactionHash": "0xe40b7a1c9d2f53680a1e8d7b45c0630f2218ae0d3b7c91f254a06e8d3c4b0a95"
+      },
+      {
+        "stage": "CUSTODY_TRANSFER",
+        "label": "Custody transferred to base",
+        "detail": "Sensor pack received by CFB Gagetown vehicle maintenance.",
+        "location": "CFB Gagetown — Maintenance Bay 2",
+        "actor": "logistics-officer-204",
+        "timestamp": "2026-03-22T14:35:00.000Z",
+        "transactionHash": "0x9f02b7a1c8d3e54670a1e9d8b46c1530f8817ae0d2b7c93f251a07e8d3c4b0a64"
+      }
+    ]
+  }
+]

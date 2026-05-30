@@ -1,0 +1,24 @@
+[
+  {
+    "id": "vendor-northline-systems",
+    "name": "NorthLine Systems",
+    "riskStatus": "clear",
+    "riskReason": null,
+    "controlledGoodsStatus": "unknown",
+    "countryExposure": [
+      "Canada",
+      "United States",
+      "China"
+    ]
+  },
+  {
+    "id": "vendor-maple-secure",
+    "name": "Maple Secure Components",
+    "riskStatus": "clear",
+    "riskReason": null,
+    "controlledGoodsStatus": "registered",
+    "countryExposure": [
+      "Canada"
+    ]
+  }
+]

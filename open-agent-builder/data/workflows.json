@@ -1,0 +1,59 @@
+[
+  {
+    "id": "workflow-radar-001",
+    "documentId": "doc-radar-upgrade-001",
+    "projectId": "project-radar-001",
+    "nodes": [
+      {
+        "id": "project-start",
+        "type": "projectStart",
+        "label": "Radar Support Equipment Procurement",
+        "position": { "x": 55, "y": 55 },
+        "status": "ready"
+      },
+      {
+        "id": "vendor-slot",
+        "type": "vendor",
+        "label": "Vendor / Contractor",
+        "position": { "x": 380, "y": 55 },
+        "status": "pending"
+      },
+      {
+        "id": "origin-check",
+        "type": "partOrigin",
+        "label": "Component Origin Review",
+        "position": { "x": 380, "y": 215 },
+        "status": "review",
+        "countryExposure": ["Canada", "United States", "China"]
+      },
+      {
+        "id": "human-review",
+        "type": "humanReview",
+        "label": "Security Officer Review",
+        "position": { "x": 55, "y": 215 },
+        "status": "required"
+      },
+      {
+        "id": "ledger-log",
+        "type": "ledgerLog",
+        "label": "Write Vendor Flag Event",
+        "position": { "x": 55, "y": 375 },
+        "status": "audit"
+      },
+      {
+        "id": "approved-release",
+        "type": "approval",
+        "label": "Approved / Released",
+        "position": { "x": 380, "y": 375 },
+        "status": "ready"
+      }
+    ],
+    "edges": [
+      { "id": "edge-start-vendor", "source": "project-start", "target": "vendor-slot", "label": "candidate vendor" },
+      { "id": "edge-vendor-origin", "source": "vendor-slot", "target": "origin-check", "label": "origin review" },
+      { "id": "edge-origin-review", "source": "origin-check", "target": "human-review", "label": "officer review" },
+      { "id": "edge-review-ledger", "source": "human-review", "target": "ledger-log", "label": "audit event" },
+      { "id": "edge-ledger-approved", "source": "ledger-log", "target": "approved-release", "label": "release gate" }
+    ]
+  }
+]

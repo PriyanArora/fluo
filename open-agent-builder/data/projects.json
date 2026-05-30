@@ -1,0 +1,23 @@
+[
+  {
+    "id": "project-radar-001",
+    "organizationId": "org-cfb-gagetown-01",
+    "name": "Radar Support Equipment Procurement",
+    "status": "active",
+    "workflowId": "workflow-radar-001"
+  },
+  {
+    "id": "project-comms-002",
+    "organizationId": "org-cfb-gagetown-01",
+    "name": "Base Communications Retrofit",
+    "status": "active",
+    "workflowId": "workflow-comms-002"
+  },
+  {
+    "id": "project-maint-003",
+    "organizationId": "org-cfb-gagetown-01",
+    "name": "Vehicle Maintenance Sensor Package",
+    "status": "active",
+    "workflowId": "workflow-maint-003"
+  }
+]

@@ -1,0 +1,292 @@
+[
+  {
+    "eventId": 1,
+    "projectId": "project-radar-001",
+    "entityId": "vendor-northline-systems",
+    "eventType": "VENDOR_FLAG_DETECTED",
+    "payloadHash": "sha256:9bfa29e542a0360b45251fb6a8e538cb3f97b299776c2313ec6f039c9e6ae469",
+    "actor": "0x0000000000000000000000000000000000000000",
+    "timestamp": "2026-05-30T09:56:37.374Z",
+    "payload": {
+      "vendorId": "vendor-northline-systems",
+      "projectId": "project-radar-001",
+      "decision": "blocked",
+      "reason": "Matched by mock Canadian vetting update. Human review required before authorization."
+    },
+    "transactionHash": "0x6925471dd80ae0d28c3736f2f4b1856770b25cc17d182b3b520468f28fb5230a"
+  },
+  {
+    "eventId": 2,
+    "projectId": "project-radar-001",
+    "entityId": "vendor-northline-systems",
+    "eventType": "PROJECT_BLOCKED",
+    "payloadHash": "sha256:5d4b59dfe3e24a4b98ebd2025f648a2ed5d076ce7cfc3e018133fc73244f16a6",
+    "actor": "0x0000000000000000000000000000000000000000",
+    "timestamp": "2026-05-30T09:56:37.374Z",
+    "payload": {
+      "vendorId": "vendor-northline-systems",
+      "projectId": "project-radar-001",
+      "decision": "blocked",
+      "blockedProjectId": "project-radar-001",
+      "reason": "Matched by mock Canadian vetting update. Human review required before authorization."
+    },
+    "transactionHash": "0x6ccaf48646cf2e59bf801bb4f89fcba0a597f7857772dcaa469e2e92d9117e7d"
+  },
+  {
+    "eventId": 3,
+    "projectId": "project-comms-002",
+    "entityId": "vendor-northline-systems",
+    "eventType": "RELATED_PROJECT_ALERTED",
+    "payloadHash": "sha256:d3a34f2d70614dd93bd64a9cd103cbf359f3b32d6316c26e07c6e4f7f6494961",
+    "actor": "0x0000000000000000000000000000000000000000",
+    "timestamp": "2026-05-30T09:56:37.374Z",
+    "payload": {
+      "vendorId": "vendor-northline-systems",
+      "projectId": "project-radar-001",
+      "decision": "blocked",
+      "relatedProjectId": "project-comms-002",
+      "relatedProjectName": "Base Communications Retrofit",
+      "requiredAction": "Human review required"
+    },
+    "transactionHash": "0xd3f6c59c4ddf36f356d5a7227938c7125b7b892c813f88038ea82baf8d7abc85"
+  },
+  {
+    "eventId": 4,
+    "projectId": "project-maint-003",
+    "entityId": "vendor-northline-systems",
+    "eventType": "RELATED_PROJECT_ALERTED",
+    "payloadHash": "sha256:b36514be6e1667a2f413e9fc3dcfafdda85ed93456c0c1f4b869533249b954a9",
+    "actor": "0x0000000000000000000000000000000000000000",
+    "timestamp": "2026-05-30T09:56:37.374Z",
+    "payload": {
+      "vendorId": "vendor-northline-systems",
+      "projectId": "project-radar-001",
+      "decision": "blocked",
+      "relatedProjectId": "project-maint-003",
+      "relatedProjectName": "Vehicle Maintenance Sensor Package",
+      "requiredAction": "Human review required"
+    },
+    "transactionHash": "0x84d8ad84ec30e9bb392d5152e09e62782a6e3e0789351627904e00d5fc2a5fd2"
+  },
+  {
+    "eventId": 5,
+    "projectId": "project-radar-001",
+    "entityId": "vendor-northline-systems",
+    "eventType": "HUMAN_REVIEW_REQUIRED",
+    "payloadHash": "sha256:f514ba450a2c5019046ece470d6577b8466e90f779b2a1cf297aca50732a7117",
+    "actor": "0x0000000000000000000000000000000000000000",
+    "timestamp": "2026-05-30T09:56:37.374Z",
+    "payload": {
+      "vendorId": "vendor-northline-systems",
+      "projectId": "project-radar-001",
+      "decision": "blocked",
+      "reviewQueue": "Canadian vetting process",
+      "reason": "Matched by mock Canadian vetting update. Human review required before authorization."
+    },
+    "transactionHash": "0x92276c6d85bf67567d393d88fd8dc7797134de1482e3363b082d607ad0947077"
+  },
+  {
+    "eventId": 6,
+    "projectId": "project-radar-001",
+    "entityId": "vendor-maple-secure",
+    "eventType": "VENDOR_DROPPED_ON_WORKFLOW",
+    "payloadHash": "sha256:2331022d9b75e5fb768fbae62ab41944c93117de379e454a3979cb7b4e426395",
+    "actor": "0x0000000000000000000000000000000000000000",
+    "timestamp": "2026-05-30T09:56:41.657Z",
+    "payload": {
+      "vendorId": "vendor-maple-secure",
+      "projectId": "project-radar-001",
+      "decision": "allowed",
+      "reason": "Vendor risk status is clear in local vetting registry."
+    },
+    "transactionHash": "0x695dabb54a31087b70ebd99464ddb97119bcdedaa533acfc98175249544059eb"
+  },
+  {
+    "eventId": 7,
+    "projectId": "project-radar-001",
+    "entityId": "vendor-northline-systems",
+    "eventType": "VENDOR_FLAG_DETECTED",
+    "payloadHash": "sha256:9bfa29e542a0360b45251fb6a8e538cb3f97b299776c2313ec6f039c9e6ae469",
+    "actor": "0x0000000000000000000000000000000000000000",
+    "timestamp": "2026-05-30T09:56:43.286Z",
+    "payload": {
+      "vendorId": "vendor-northline-systems",
+      "projectId": "project-radar-001",
+      "decision": "blocked",
+      "reason": "Matched by mock Canadian vetting update. Human review required before authorization."
+    },
+    "transactionHash": "0xce39ddab15286021a685dde23deba5bf8d42240c17b27d7c795507d3e6d68014"
+  },
+  {
+    "eventId": 8,
+    "projectId": "project-radar-001",
+    "entityId": "vendor-northline-systems",
+    "eventType": "PROJECT_BLOCKED",
+    "payloadHash": "sha256:5d4b59dfe3e24a4b98ebd2025f648a2ed5d076ce7cfc3e018133fc73244f16a6",
+    "actor": "0x0000000000000000000000000000000000000000",
+    "timestamp": "2026-05-30T09:56:43.286Z",
+    "payload": {
+      "vendorId": "vendor-northline-systems",
+      "projectId": "project-radar-001",
+      "decision": "blocked",
+      "blockedProjectId": "project-radar-001",
+      "reason": "Matched by mock Canadian vetting update. Human review required before authorization."
+    },
+    "transactionHash": "0xc77a7f1e81c6a08e6a952c108543485f3d834182d07ad10ea61403832d323597"
+  },
+  {
+    "eventId": 9,
+    "projectId": "project-comms-002",
+    "entityId": "vendor-northline-systems",
+    "eventType": "RELATED_PROJECT_ALERTED",
+    "payloadHash": "sha256:d3a34f2d70614dd93bd64a9cd103cbf359f3b32d6316c26e07c6e4f7f6494961",
+    "actor": "0x0000000000000000000000000000000000000000",
+    "timestamp": "2026-05-30T09:56:43.286Z",
+    "payload": {
+      "vendorId": "vendor-northline-systems",
+      "projectId": "project-radar-001",
+      "decision": "blocked",
+      "relatedProjectId": "project-comms-002",
+      "relatedProjectName": "Base Communications Retrofit",
+      "requiredAction": "Human review required"
+    },
+    "transactionHash": "0x9cb290d7106362ce64cce18fa17ea124d64d3a7de0701a211a42f4a926af4479"
+  },
+  {
+    "eventId": 10,
+    "projectId": "project-maint-003",
+    "entityId": "vendor-northline-systems",
+    "eventType": "RELATED_PROJECT_ALERTED",
+    "payloadHash": "sha256:b36514be6e1667a2f413e9fc3dcfafdda85ed93456c0c1f4b869533249b954a9",
+    "actor": "0x0000000000000000000000000000000000000000",
+    "timestamp": "2026-05-30T09:56:43.286Z",
+    "payload": {
+      "vendorId": "vendor-northline-systems",
+      "projectId": "project-radar-001",
+      "decision": "blocked",
+      "relatedProjectId": "project-maint-003",
+      "relatedProjectName": "Vehicle Maintenance Sensor Package",
+      "requiredAction": "Human review required"
+    },
+    "transactionHash": "0x6acd3c495949ea0a7bfb57f14714061351d726db661d386a19c60d9ee0e212ab"
+  },
+  {
+    "eventId": 11,
+    "projectId": "project-radar-001",
+    "entityId": "vendor-northline-systems",
+    "eventType": "HUMAN_REVIEW_REQUIRED",
+    "payloadHash": "sha256:f514ba450a2c5019046ece470d6577b8466e90f779b2a1cf297aca50732a7117",
+    "actor": "0x0000000000000000000000000000000000000000",
+    "timestamp": "2026-05-30T09:56:43.286Z",
+    "payload": {
+      "vendorId": "vendor-northline-systems",
+      "projectId": "project-radar-001",
+      "decision": "blocked",
+      "reviewQueue": "Canadian vetting process",
+      "reason": "Matched by mock Canadian vetting update. Human review required before authorization."
+    },
+    "transactionHash": "0x4c60fd4578cabc8b73f0d32077b999722175e3010283fbb709774a5893d39d6e"
+  },
+  {
+    "eventId": 12,
+    "projectId": "project-radar-001",
+    "entityId": "vendor-maple-secure",
+    "eventType": "VENDOR_DROPPED_ON_WORKFLOW",
+    "payloadHash": "sha256:2331022d9b75e5fb768fbae62ab41944c93117de379e454a3979cb7b4e426395",
+    "actor": "0x0000000000000000000000000000000000000000",
+    "timestamp": "2026-05-30T09:56:45.586Z",
+    "payload": {
+      "vendorId": "vendor-maple-secure",
+      "projectId": "project-radar-001",
+      "decision": "allowed",
+      "reason": "Vendor risk status is clear in local vetting registry."
+    },
+    "transactionHash": "0x097cc3b76340309c0b9c78598eab252a957430f6a542db4b9650cc329c409ff4"
+  },
+  {
+    "eventId": 13,
+    "projectId": "project-radar-001",
+    "entityId": "vendor-northline-systems",
+    "eventType": "VENDOR_FLAG_DETECTED",
+    "payloadHash": "sha256:9bfa29e542a0360b45251fb6a8e538cb3f97b299776c2313ec6f039c9e6ae469",
+    "actor": "0x0000000000000000000000000000000000000000",
+    "timestamp": "2026-05-30T09:56:47.229Z",
+    "payload": {
+      "vendorId": "vendor-northline-systems",
+      "projectId": "project-radar-001",
+      "decision": "blocked",
+      "reason": "Matched by mock Canadian vetting update. Human review required before authorization."
+    },
+    "transactionHash": "0xa580f3305d441a9e4c086c166f72db5d08b35fc1c18b8184411d41d8856e7160"
+  },
+  {
+    "eventId": 14,
+    "projectId": "project-radar-001",
+    "entityId": "vendor-northline-systems",
+    "eventType": "PROJECT_BLOCKED",
+    "payloadHash": "sha256:5d4b59dfe3e24a4b98ebd2025f648a2ed5d076ce7cfc3e018133fc73244f16a6",
+    "actor": "0x0000000000000000000000000000000000000000",
+    "timestamp": "2026-05-30T09:56:47.229Z",
+    "payload": {
+      "vendorId": "vendor-northline-systems",
+      "projectId": "project-radar-001",
+      "decision": "blocked",
+      "blockedProjectId": "project-radar-001",
+      "reason": "Matched by mock Canadian vetting update. Human review required before authorization."
+    },
+    "transactionHash": "0x72d30a5897a5c963ea4cdada3d61d9d18202a54119bc7bf485ea648a917020a0"
+  },
+  {
+    "eventId": 15,
+    "projectId": "project-comms-002",
+    "entityId": "vendor-northline-systems",
+    "eventType": "RELATED_PROJECT_ALERTED",
+    "payloadHash": "sha256:d3a34f2d70614dd93bd64a9cd103cbf359f3b32d6316c26e07c6e4f7f6494961",
+    "actor": "0x0000000000000000000000000000000000000000",
+    "timestamp": "2026-05-30T09:56:47.229Z",
+    "payload": {
+      "vendorId": "vendor-northline-systems",
+      "projectId": "project-radar-001",
+      "decision": "blocked",
+      "relatedProjectId": "project-comms-002",
+      "relatedProjectName": "Base Communications Retrofit",
+      "requiredAction": "Human review required"
+    },
+    "transactionHash": "0x09fda632a9ebb3d89d7438a388a30fefc16fb6814c31b66110f52e5f94c115a3"
+  },
+  {
+    "eventId": 16,
+    "projectId": "project-maint-003",
+    "entityId": "vendor-northline-systems",
+    "eventType": "RELATED_PROJECT_ALERTED",
+    "payloadHash": "sha256:b36514be6e1667a2f413e9fc3dcfafdda85ed93456c0c1f4b869533249b954a9",
+    "actor": "0x0000000000000000000000000000000000000000",
+    "timestamp": "2026-05-30T09:56:47.229Z",
+    "payload": {
+      "vendorId": "vendor-northline-systems",
+      "projectId": "project-radar-001",
+      "decision": "blocked",
+      "relatedProjectId": "project-maint-003",
+      "relatedProjectName": "Vehicle Maintenance Sensor Package",
+      "requiredAction": "Human review required"
+    },
+    "transactionHash": "0x253ae66dc5395092eddf869dfad23cdd48243286a01bf39e8024a79e0ffe9a94"
+  },
+  {
+    "eventId": 17,
+    "projectId": "project-radar-001",
+    "entityId": "vendor-northline-systems",
+    "eventType": "HUMAN_REVIEW_REQUIRED",
+    "payloadHash": "sha256:f514ba450a2c5019046ece470d6577b8466e90f779b2a1cf297aca50732a7117",
+    "actor": "0x0000000000000000000000000000000000000000",
+    "timestamp": "2026-05-30T09:56:47.229Z",
+    "payload": {
+      "vendorId": "vendor-northline-systems",
+      "projectId": "project-radar-001",
+      "decision": "blocked",
+      "reviewQueue": "Canadian vetting process",
+      "reason": "Matched by mock Canadian vetting update. Human review required before authorization."
+    },
+    "transactionHash": "0x40b9e59b900db6df97bcd004fce4b6766d42447b2b4aa21796c9a020c3927061"
+  }
+]
