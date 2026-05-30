@@ -288,5 +288,69 @@
       "reason": "Matched by mock Canadian vetting update. Human review required before authorization."
     },
     "transactionHash": "0x40b9e59b900db6df97bcd004fce4b6766d42447b2b4aa21796c9a020c3927061"
+  },
+  {
+    "eventId": 18,
+    "projectId": "project-radar-001",
+    "entityId": "vendor-northline-systems",
+    "eventType": "VENDOR_DROPPED_ON_WORKFLOW",
+    "payloadHash": "sha256:f6c9c39023371e0061a4c2e9a71e714f026f23b89e7413b300cb3799e1993fb5",
+    "actor": "0x0000000000000000000000000000000000000000",
+    "timestamp": "2026-05-30T19:38:45.222Z",
+    "payload": {
+      "vendorId": "vendor-northline-systems",
+      "projectId": "project-radar-001",
+      "decision": "allowed",
+      "reason": "Vendor risk status is clear in local vetting registry."
+    },
+    "transactionHash": "0x175734f4fb04c8fa859184adca3d95e6a395ade9f0631d229a29a208ca759ed0"
+  },
+  {
+    "eventId": 19,
+    "projectId": "project-radar-001",
+    "entityId": "vendor-maple-secure",
+    "eventType": "VENDOR_DROPPED_ON_WORKFLOW",
+    "payloadHash": "sha256:2331022d9b75e5fb768fbae62ab41944c93117de379e454a3979cb7b4e426395",
+    "actor": "0x0000000000000000000000000000000000000000",
+    "timestamp": "2026-05-30T19:39:10.822Z",
+    "payload": {
+      "vendorId": "vendor-maple-secure",
+      "projectId": "project-radar-001",
+      "decision": "allowed",
+      "reason": "Vendor risk status is clear in local vetting registry."
+    },
+    "transactionHash": "0xc3ee279d733d39795304dd0db7750224dbb28ec6287526392e66e9c17ab71705"
+  },
+  {
+    "eventId": 20,
+    "projectId": "project-radar-001",
+    "entityId": "vendor-northline-systems",
+    "eventType": "VENDOR_DROPPED_ON_WORKFLOW",
+    "payloadHash": "sha256:f6c9c39023371e0061a4c2e9a71e714f026f23b89e7413b300cb3799e1993fb5",
+    "actor": "0x0000000000000000000000000000000000000000",
+    "timestamp": "2026-05-30T19:40:46.943Z",
+    "payload": {
+      "vendorId": "vendor-northline-systems",
+      "projectId": "project-radar-001",
+      "decision": "allowed",
+      "reason": "Vendor risk status is clear in local vetting registry."
+    },
+    "transactionHash": "0x33c6d516448dc1512d4cc73d5f4c00822da6d216e30cbe865c338db4381406bc"
+  },
+  {
+    "eventId": 21,
+    "projectId": "project-radar-001",
+    "entityId": "vendor-northline-systems",
+    "eventType": "VENDOR_DROPPED_ON_WORKFLOW",
+    "payloadHash": "sha256:f6c9c39023371e0061a4c2e9a71e714f026f23b89e7413b300cb3799e1993fb5",
+    "actor": "0x0000000000000000000000000000000000000000",
+    "timestamp": "2026-05-30T19:40:50.885Z",
+    "payload": {
+      "vendorId": "vendor-northline-systems",
+      "projectId": "project-radar-001",
+      "decision": "allowed",
+      "reason": "Vendor risk status is clear in local vetting registry."
+    },
+    "transactionHash": "0x9be1a86cf3e709e05644209159851178c0881d96239f4babe463dcac0df5f306"
   }
 ]
