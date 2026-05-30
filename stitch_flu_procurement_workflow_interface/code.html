@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>fluō - Defense-Grade Procurement Orchestration</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;700&amp;family=Hanken+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-container": "#1e2124",
+                      "on-background": "#1a1c1c",
+                      "on-tertiary-fixed-variant": "#4e4540",
+                      "surface-container-low": "#f3f3f3",
+                      "surface": "#f9f9f9",
+                      "on-tertiary-container": "#918680",
+                      "surface-container-high": "#e8e8e8",
+                      "on-surface-variant": "#44474a",
+                      "on-surface": "#1a1c1c",
+                      "tertiary": "#0d0805",
+                      "monochrome-gradient-light": "#666666",
+                      "secondary": "#5e5e5e",
+                      "surface-container-highest": "#e2e2e2",
+                      "on-secondary-container": "#646464",
+                      "spectrum-start": "#FF0000",
+                      "on-tertiary": "#ffffff",
+                      "surface-bright": "#f9f9f9",
+                      "on-primary": "#ffffff",
+                      "interface-border": "#E5E5E5",
+                      "outline": "#75777a",
+                      "background": "#f9f9f9",
+                      "surface-container": "#eeeeee",
+                      "surface-dim": "#dadada",
+                      "on-error-container": "#93000a",
+                      "tertiary-fixed-dim": "#d1c4bd",
+                      "on-primary-container": "#86888c",
+                      "on-primary-fixed": "#191c1f",
+                      "on-error": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-fixed": "#e1e2e6",
+                      "tertiary-container": "#261f1b",
+                      "spectrum-mid": "#00FF00",
+                      "surface-tint": "#5c5f62",
+                      "interface-surface": "#FDFDFD",
+                      "on-primary-fixed-variant": "#44474a",
+                      "spectrum-end": "#0000FF",
+                      "inverse-primary": "#c5c6ca",
+                      "secondary-container": "#e3e2e2",
+                      "on-secondary-fixed-variant": "#464747",
+                      "error": "#ba1a1a",
+                      "tertiary-fixed": "#eee0d9",
+                      "error-container": "#ffdad6",
+                      "primary-fixed-dim": "#c5c6ca",
+                      "monochrome-gradient-dark": "#000000",
+                      "inverse-on-surface": "#f1f1f1",
+                      "on-secondary-fixed": "#1b1c1c",
+                      "secondary-fixed-dim": "#c7c6c6",
+                      "primary": "#070a0c",
+                      "outline-variant": "#c5c6ca",
+                      "on-tertiary-fixed": "#211a16",
+                      "surface-variant": "#e2e2e2",
+                      "inverse-surface": "#2f3131",
+                      "secondary-fixed": "#e3e2e2"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "node-gap": "32px",
+                      "container-max": "1440px",
+                      "gutter": "24px",
+                      "margin-desktop": "48px",
+                      "unit": "4px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "JetBrains Mono"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-xl": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg-mobile": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "label-xs": [
+                              "JetBrains Mono"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-xl": [
+                              "64px",
+                              {
+                                      "lineHeight": "72px",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-xs": [
+                              "10px",
+                              {
+                                      "lineHeight": "12px",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.surface');
+            color: theme('colors.on-surface');
+        }
+        
+        .evil-gradient {
+            background: linear-gradient(135deg, theme('colors.spectrum-start') 0%, theme('colors.spectrum-mid') 50%, theme('colors.spectrum-end') 100%);
+        }
+        
+        .node-path {
+            stroke: theme('colors.interface-border');
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .node-path-active {
+            stroke: url(#evil-gradient-svg);
+            stroke-width: 2;
+            fill: none;
+            animation: dash 2s linear infinite;
+        }
+
+        @keyframes dash {
+          to {
+            stroke-dashoffset: -20;
+          }
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen font-body-md text-body-md flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop bg-surface/90 backdrop-blur-md h-16 border-b border-interface-border dark:border-on-surface-variant">
+<div class="flex items-center space-x-gutter">
+<a class="font-display-xl text-display-xl tracking-tighter mix-blend-difference text-primary dark:text-on-primary leading-none" href="#">
+                fluō
+            </a>
+<div class="hidden md:flex space-x-node-gap items-center h-full pt-2">
+<a class="text-on-surface-variant dark:text-on-primary-container font-label-sm text-label-sm hover:text-primary transition-colors h-full flex items-center" href="#">Modules</a>
+<a class="text-on-surface-variant dark:text-on-primary-container font-label-sm text-label-sm hover:text-primary transition-colors h-full flex items-center" href="#">Workflows</a>
+<a class="text-on-surface-variant dark:text-on-primary-container font-label-sm text-label-sm hover:text-primary transition-colors h-full flex items-center" href="#">Governance</a>
+<a class="text-on-surface-variant dark:text-on-primary-container font-label-sm text-label-sm hover:text-primary transition-colors h-full flex items-center" href="#">Network</a>
+</div>
+</div>
+<div class="flex items-center space-x-margin-mobile">
+<button class="hidden md:block font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors">
+                System Status
+            </button>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-4 py-2 rounded-none hover:bg-surface-tint transition-colors">
+                Get Started
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-16 flex flex-col">
+<!-- Hero Section -->
+<section class="relative w-full h-[80vh] min-h-[600px] flex flex-col justify-end px-margin-mobile md:px-margin-desktop pb-margin-desktop overflow-hidden">
+<div class="absolute inset-0 z-0 bg-surface-container-highest">
+<img alt="fluō Orchestration Hero" class="w-full h-full object-cover opacity-80 mix-blend-multiply grayscale contrast-125" src="https://lh3.googleusercontent.com/aida/ADBb0uiTFW0TRDQ5FngmTKWgDwRriVUEeK4fF15L5JFqphVFVXSOO1Q1JXhTgGvJR6Zf_CDOP9sq8PdAT0e0W3ejjAhZB4tCvrSABAWPeeLCwoAoIlXmjHYX1E_e9ECOe8r9J9x6E2HtlOjalVOeorZ24p0x5GqnK8R3ECNjL9LvvG3srZOmPGZoGKXw_wv4QoHS4mMI--bPqFXvQdqkVVYki05t2f7Uvy7mHpje4mH1wyX3Hkkah1sKnkpzYhiy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-4xl space-y-node-gap">
+<h1 class="font-display-xl text-display-xl md:text-[88px] md:line-height-[96px] tracking-tighter text-primary">
+                    Orchestrate<br/>Mission-Critical<br/>Procurement.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl border-l-2 border-primary pl-4">
+                    The defense-grade operating system for supply chain resilience. Connect nodes, automate workflows, and deploy with complete governance across any environment.
+                </p>
+<div class="flex space-x-margin-mobile pt-4">
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-6 py-3 hover:bg-surface-tint transition-colors uppercase tracking-wider">
+                        Explore Platform
+                    </button>
+<button class="border border-interface-border text-primary font-label-sm text-label-sm px-6 py-3 hover:bg-surface-container transition-colors uppercase tracking-wider flex items-center space-x-2">
+<span>Request Demo</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Abstract decorative element -->
+<div class="absolute right-margin-desktop bottom-margin-desktop hidden lg:flex flex-col space-y-1 items-end opacity-50 mix-blend-multiply">
+<div class="w-32 h-[2px] bg-primary"></div>
+<div class="w-24 h-[2px] bg-primary"></div>
+<div class="w-16 h-[2px] bg-primary"></div>
+<div class="font-label-sm text-label-sm text-primary mt-2 uppercase tracking-widest">Sys_Status: Operational</div>
+</div>
+</section>
+<!-- Divider with Gradient -->
+<div class="w-full h-[4px] evil-gradient"></div>
+<!-- Typography / Statement Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface flex justify-center items-center text-center">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg max-w-5xl tracking-tight text-primary">
+                Our software powers real-time, <span class="text-outline italic font-light">AI-driven</span> decisions in critical government and commercial enterprises in the West, from the factory floors to the front lines.
+            </h2>
+</section>
+<!-- Products Node-Style Section -->
+<section class="py-16 px-margin-mobile md:px-margin-desktop bg-surface border-t border-interface-border relative overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter relative z-10">
+<!-- Node Menu (Left Column) -->
+<div class="col-span-1 md:col-span-4 flex flex-col space-y-12 pr-gutter border-r border-interface-border">
+<div class="pb-4 border-b border-interface-border">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest">Our Software</span>
+</div>
+<!-- Product Item 1 -->
+<div class="group cursor-pointer">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-lg text-headline-lg font-bold group-hover:text-spectrum-end transition-colors">Kinetic</h3>
+<span class="font-label-xs text-label-xs text-outline">/0.1</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Automate defense supply chains, from prime contractor to the tactical edge.</p>
+</div>
+<!-- Product Item 2 -->
+<div class="group cursor-pointer opacity-50 hover:opacity-100 transition-opacity">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-lg text-headline-lg font-bold">Nexus</h3>
+<span class="font-label-xs text-label-xs text-outline">/0.2</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Global commercial inventory visibility and predictive disruption modeling.</p>
+</div>
+<!-- Product Item 3 -->
+<div class="group cursor-pointer opacity-50 hover:opacity-100 transition-opacity">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-lg text-headline-lg font-bold">Foundry-OS</h3>
+<span class="font-label-xs text-label-xs text-outline">/0.3</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">The central orchestration layer for unifying procurement datasets.</p>
+</div>
+</div>
+<!-- Active Node Canvas (Right Area) -->
+<div class="col-span-1 md:col-span-8 pl-gutter flex flex-col justify-center min-h-[400px] relative">
+<!-- N8N Style Diagram Background -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" preserveaspectratio="none">
+<defs>
+<lineargradient id="evil-gradient-svg" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#FF0000"></stop>
+<stop offset="50%" stop-color="#00FF00"></stop>
+<stop offset="100%" stop-color="#0000FF"></stop>
+</lineargradient>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E5E5E5" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+<!-- Connecting Lines -->
+<path class="node-path" d="M 50 150 C 150 150, 200 250, 300 250"></path>
+<path class="node-path" d="M 50 350 C 150 350, 200 250, 300 250"></path>
+<path class="node-path-active" d="M 300 250 L 500 250" stroke-dasharray="5,5"></path>
+</svg>
+<!-- Active Content Card -->
+<div class="relative z-10 bg-white border border-interface-border p-margin-mobile md:p-node-gap shadow-[4px_4px_0_0_rgba(0,0,0,0.1)]">
+<div class="absolute top-0 left-0 w-full h-[4px] bg-primary"></div>
+<div class="flex justify-between items-start mb-margin-mobile">
+<span class="font-label-sm text-label-sm bg-surface-container-low px-2 py-1 border border-interface-border">ID: KN-01-ACTIVE</span>
+<span class="material-symbols-outlined text-primary">account_tree</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-2">Defense Orchestration Node</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Deploy autonomous procurement agents to negotiate, verify compliance, and execute contracts across classified and unclassified networks simultaneously.
+                        </p>
+<img alt="Defense Tactical Node Interface" class="w-full h-auto border border-interface-border grayscale hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0ugXhVybvhEdDzSTaUuYetePJwoR6DVOtkv3MwHQKqmALiSWIH8__mJslwdO-JukoKd953kwo9N77R7zFv6urMofM5nV_7GOtQ8uylfjuOKv2suwpeo_SJNmUkDn3yIlLnRgDWwwhoAumkyQ017RdjDk_99m0z0tiucMhQYUPEhInMnQq0yGHIpGP3993IcMHdhP6dQnc0y7C-F4oyf3rxqFVVm0BWRNqiUEnIYYuls38XW9Rmoyw0t8oN5y"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Two Column Image/Text Block -->
+<section class="py-16 px-margin-mobile md:px-margin-desktop bg-surface-container-low border-t border-interface-border">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Image Box -->
+<div class="relative h-[400px] border border-interface-border overflow-hidden bg-primary">
+<img alt="Abstract representation of systemic order" class="w-full h-full object-cover mix-blend-luminosity opacity-80" src="https://lh3.googleusercontent.com/aida/ADBb0uiUP2GndHAdvULMGKJfViUriE2LbeFys-ReXQJKiJVa6R0U5cjApkpanItO1V5x5ULhJg5FWRkdcn5OQ2v6fGPE591aXQxUIaDZxGqVTZR4y1ItDLoiAKUwMucrnLvsm7u2EQw2fufKCondl9f22vySHiipvxc1gvJWx5khZfUUh6Gc2CA2DxAMaLFr0GZw1kqWN5tcHEJGalFQ3v5gdFfutC3JMnRXCCkJ1OaWkEOqEpn6jCdzxjzjmgc"/>
+<div class="absolute bottom-4 left-4 bg-white border border-interface-border p-2">
+<span class="font-label-xs text-label-xs text-primary">SYS_LOG: CONNECTED</span>
+</div>
+</div>
+<!-- Text Box -->
+<div class="flex flex-col justify-center items-center text-center p-margin-mobile md:p-margin-desktop bg-white border border-interface-border shadow-[4px_4px_0_0_rgba(0,0,0,0.1)]">
+<h3 class="font-headline-md text-headline-md font-bold mb-4">There is so much left to build</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-md">
+                        fluō engineers deliver mission-critical outcomes for the West's most important institutions. Join the network.
+                    </p>
+<button class="border border-primary text-primary font-label-sm text-label-sm px-6 py-2 hover:bg-primary hover:text-white transition-colors uppercase tracking-widest">
+                        Learn More
+                    </button>
+</div>
+</div>
+</section>
+<!-- Partner Testimonials (Bento-ish) -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface border-t border-interface-border">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-12 max-w-2xl">What our partners say about us</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="col-span-1 md:col-span-1 bg-surface-container-low p-6 border border-interface-border flex flex-col justify-between min-h-[300px]">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest block mb-4">Defense Prime</span>
+<p class="font-body-sm text-sm text-on-surface-variant italic">"Kinetic reduced our hardware procurement cycle from 18 months to 4 weeks. The node-based visibility is unprecedented."</p>
+</div>
+<div class="mt-4 font-label-xs text-label-xs font-bold">VP Operations</div>
+</div>
+<div class="col-span-1 md:col-span-2 bg-white border border-interface-border p-6 shadow-[4px_4px_0_0_rgba(0,0,0,0.05)] relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-surface-container-high to-transparent opacity-50 transform rotate-45 translate-x-10 -translate-y-10 group-hover:scale-110 transition-transform"></div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest block mb-4 relative z-10">Global Logistics Corp</span>
+<p class="font-body-md text-body-md text-primary relative z-10 mb-8 max-w-xl">"We started with the goal of piloting 10 nodes. Leveraging Nexus, we began to see real promise quickly in composing AI-powered workflows that allowed us to get to 4,000 active tracking agents within eight months."</p>
+<div class="mt-auto font-label-xs text-label-xs font-bold relative z-10 border-t border-interface-border pt-4">Chief Supply Chain Officer</div>
+</div>
+<div class="col-span-1 md:col-span-1 bg-surface-container-low p-6 border border-interface-border flex flex-col justify-between min-h-[300px]">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest block mb-4">Federal Agency</span>
+<p class="font-body-sm text-sm text-on-surface-variant italic">"Foundry-OS integration enabled us to audit thousands of vendor contracts in real-time."</p>
+</div>
+<div class="mt-4 font-label-xs text-label-xs font-bold">Director of Procurement</div>
+</div>
+</div>
+</section>
+<!-- CTAs -->
+<section class="py-16 px-margin-mobile md:px-margin-desktop bg-surface border-t border-interface-border">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="group bg-surface-container-low border border-interface-border p-8 md:p-12 cursor-pointer hover:bg-surface-container transition-colors flex justify-between items-center">
+<h3 class="font-headline-lg text-headline-lg">Request a Demo</h3>
+<span class="material-symbols-outlined text-4xl group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+<div class="group bg-primary text-white border border-primary p-8 md:p-12 cursor-pointer hover:bg-surface-tint transition-colors flex justify-between items-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDEwaDQwTTEwIDB2NDBNMCAzMGg0ME0zMCAwdjQwIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg==')]"></div>
+<h3 class="font-headline-lg text-headline-lg relative z-10">Start Building</h3>
+<span class="material-symbols-outlined text-4xl relative z-10 group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component from JSON -->
+<footer class="w-full py-node-gap px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter bg-tertiary dark:bg-on-background border-t border-on-tertiary-fixed-variant">
+<div class="flex flex-col space-y-4">
+<span class="font-headline-lg text-headline-lg font-bold text-on-tertiary">fluō</span>
+<p class="font-body-md text-body-md text-on-tertiary-container dark:text-on-primary-container">
+                © 2024 fluō Systems. Defense-grade procurement orchestration.
+            </p>
+</div>
+<div class="flex flex-col items-start md:items-end space-y-2">
+<div class="flex space-x-6 flex-wrap justify-start md:justify-end">
+<a class="font-label-sm text-label-sm text-on-tertiary-container dark:text-on-primary-container hover:text-on-tertiary transition-opacity mb-2" href="#">Security</a>
+<a class="font-label-sm text-label-sm text-on-tertiary-container dark:text-on-primary-container hover:text-on-tertiary transition-opacity mb-2" href="#">API</a>
+<a class="font-label-sm text-label-sm text-on-tertiary-container dark:text-on-primary-container hover:text-on-tertiary transition-opacity mb-2" href="#">Compliance</a>
+<a class="font-label-sm text-label-sm text-on-tertiary-container dark:text-on-primary-container hover:text-on-tertiary transition-opacity mb-2" href="#">Terms</a>
+<a class="font-label-sm text-label-sm text-on-tertiary-container dark:text-on-primary-container hover:text-on-tertiary transition-opacity mb-2" href="#">Intelligence</a>
+</div>
+<div class="flex space-x-4 mt-8 opacity-50">
+<!-- Mock social icons using text for tech vibe -->
+<span class="font-label-xs text-on-tertiary border border-on-tertiary-container px-2 py-1">X</span>
+<span class="font-label-xs text-on-tertiary border border-on-tertiary-container px-2 py-1">IN</span>
+<span class="font-label-xs text-on-tertiary border border-on-tertiary-container px-2 py-1">GH</span>
+</div>
+</div>
+</footer>
+</body></html>
